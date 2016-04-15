@@ -1,0 +1,21 @@
+spiegel  16161  5373  0 Feb19 pts/6    00:00:03 emacs
+spiegel  16199 16187  0 Feb19 pts/11   00:00:00 /export/home/public/spiegel/cis136/turnin/Project2/jprin547/p2
+kwagn627 16406 15505  0 12:09 pts/10   00:00:05 emacs carLoan_KaitlynWagner.cpp
+rwhit951 17522 17499  0 12:49 pts/5    00:00:03 emacs carLoan_RussellWhite.cpp
+pyode436 17799 15725  0 13:02 pts/13   00:00:00 emacs Polygon.cpp
+spiegel  18006 16409  0 13:08 pts/12   00:00:00 vim Polygon.cpp
+pyode436 19180 19096  0 13:46 pts/26   00:00:00 emacs Date.h
+spiegel  19245 16409  0 13:47 pts/12   00:00:00 vim p2.cpp
+cpott174 22156 22120  0 14:27 pts/0    00:00:05 emacs carLoan_ChristianPotter.cpp
+cpott174 22293 22170  0 14:34 pts/14   00:00:00 emacs bmi_ChristianPotter.cpp
+pyode436 22813 18930  0 14:41 pts/19   00:00:00 ./p2
+mgait568 23277 23249  0 14:49 pts/16   00:00:00 emacs p2.cpp
+pyode436 25408 18930  0 15:03 pts/19   00:00:00 emacs p2.cpp
+alewi341 25462 25309  1 15:05 pts/17   00:00:00 emacs p2.cpp
+pyode436 25489 18959  3 15:05 pts/25   00:00:00 emacs Polygon.cpp
+parson   25820 17590  0 15:06 pts/7    00:00:00 make scan
+parson   25825 25820  0 15:06 pts/7    00:00:00 /bin/sh -c cd ./psdir && make scan
+parson   25826 25825  0 15:06 pts/7    00:00:00 make scan
+parson   25827 25826  0 15:06 pts/7    00:00:00 /bin/bash ./scanps.sh
+parson   25828 25827  0 15:06 pts/7    00:00:00 ps -af
+parson   25829 25827  0 15:06 pts/7    00:00:00 grep -v ^UID.*CMD$

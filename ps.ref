@@ -1,0 +1,11 @@
+cpott174,emacs_bmi_ChristianPotter.cpp,emacs_carLoan_ChristianPotter.cpp
+parson,/bin/bash_./scanps.sh,/bin/sh_-c_cd_./psdir_&&_make_scan
+parson,/bin/sh_-c_cd_./psdir_&&_make_scan,grep_-v_^UID.*CMD$
+parson,grep_-v_^UID.*CMD$,make_scan
+parson,make_scan,ps_-af
+pyode436,emacs_Date.h,emacs_p2.cpp
+pyode436,emacs_p2.cpp,emacs_Polygon.cpp
+pyode436,emacs_Polygon.cpp,./p2
+spiegel,emacs,/export/home/public/spiegel/cis136/turnin/Project2/jprin547/p2
+spiegel,/export/home/public/spiegel/cis136/turnin/Project2/jprin547/p2,vim_p2.cpp
+spiegel,vim_p2.cpp,vim_Polygon.cpp

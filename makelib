@@ -1,0 +1,50 @@
+#       makelib for package runcat2 in CSC 352 UNIX
+#       The common make declarations for all makefiles in this
+#       two-directory project go into this makelib.
+#       Spring, 2011, Dr. Dale Parson, Updated spring 2016
+
+# := assignment is expanded immediately
+#  = assignment is expanded recursively when actually needed,
+#    meaning that = expansion can use make variables before they are defined.
+#    10.5.3 Automatic Variables from 
+#    http://www.gnu.org/software/make/manual/make.html#toc-How-to-Use-Variables
+		# $? gives all dependencies that are newer than target
+		# $< first dependency
+		# $^ all dependencies
+		# $@ is the target
+
+CFILES := $(wildcard *.c)
+OBJFILES := $(subst .c,.o,$(CFILES))
+CFLAGS := -c
+
+ifeq ($(DEBUG),1)
+CFLAGS += -g
+endif
+AR = /usr/bin/ar
+
+%.o :	%.c
+		gcc $(CFLAGS) $< -o $@
+
+subclean:	FORCE
+		/bin/rm -f *.o *.class $(JARFILE) core *.exe *.obj *.pyc
+
+clean:		FORCE
+
+FORCE:
+
+# Following are need for "gmake turnitin" to work.
+
+STUDENT := $(shell /bin/basename $$HOME)
+WORKDIR := $(shell /bin/basename `pwd`)
+
+turnitin:		clean
+		@echo
+		@echo Do you really want to send $(TARGET) to Professor Parson?
+		@echo Hit Enter to continue, control-C to abort.
+		@echo
+		@read keyboard
+		/bin/bash -c "cd .. ; /bin/chmod 700 .                  ; \
+		/bin/tar cvf ./$(TARGET)_$(STUDENT).tar $(WORKDIR)      ; \
+		/bin/gzip ./$(TARGET)_$(STUDENT).tar                    ; \
+		/bin/chmod 666 ./$(TARGET)_$(STUDENT).tar.gz            ; \
+		/bin/mv ./$(TARGET)_$(STUDENT).tar.gz ~parson/incoming"
